@@ -13,7 +13,7 @@ export default function UnlockFeatureModal({ show }) {
 
     const ListItem = ({ icon, title, subtitle, plan, ...props }) => {
         return (
-            <li className={"btn text-start bg-dark-subtle d-flex flex-row justify-content-between border rounded-4 p-4 py-3"} {...props}>
+            <li className={"btn text-start bg-dark-subtle d-flex flex-row justify-content-between border rounded-2 p-4 py-3"} {...props}>
                 <div className="d-flex flex-column">
                     <div>
                         <i className={"fs-6 me-2 bi " + icon}></i>
@@ -25,8 +25,8 @@ export default function UnlockFeatureModal({ show }) {
                         </div>
                     )}
                 </div>
-                <div className="d-flex flex-column">
-                    <small className="ms-2 bg-body-secondary rounded-1 fw-bold px-1">{plan}</small>
+                <div className="horizontal center-h center-v ">
+                    <small className="ms-2 bg-body-secondary rounded-1 fw-bold px-2">{plan}</small>
                 </div>
             </li>
         )
