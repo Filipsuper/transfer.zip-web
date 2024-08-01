@@ -40,7 +40,7 @@ export default function SideBar({ className }) {
             <div className="px-4 mb-3">
                 <NavLink to="/app/quick-share" className={"btn text-start rounded-pill border border-secondary"} override={true}>
                     <div className="d-flex flex-row justify-content-between">
-                        Quick Share<i className="bi bi-lightning-fill"></i>
+                        Quick Share<i className="bi bi-lightning-fill text-primary"></i>
                     </div>
                 </NavLink>
             </div>
