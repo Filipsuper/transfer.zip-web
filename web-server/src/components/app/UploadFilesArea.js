@@ -22,7 +22,7 @@ export default function UploadFilesArea({ onDone, onFilesChange, allowFolders, .
 
     const FileScrollerEntry = ({ file }) => {
         return (
-            <div className="d-flex flex-row bg-dark-subtle flex-shrink-0 rounded-4">
+            <div className="d-flex flex-row bg-dark-subtle flex-shrink-0 rounded-4 m-2">
                 <div className="border-start border-top border-bottom rounded-start-4 p-2 pe-1">
                     <small>{file.name}</small>
                 </div>
@@ -34,13 +34,14 @@ export default function UploadFilesArea({ onDone, onFilesChange, allowFolders, .
     }
 
     return (
-        <div {...props}>
-            <div className="d-flex flex-row gap-1 overflow-x-auto p-2">
+        <div {...props} >
+            
+            <div className="d-flex flex-row gap-1 overflow-x-auto  ">
                 {files.map(f => {
                     return <FileScrollerEntry key={f.name + f.lastmodified + f.size + f.type} file={f} />
                 })}
             </div>
-            <div className="d-flex" style={{ minHeight: "200px" }}>
+            <div className="d-flex tw-outline-none" style={{ minHeight: "250px"}}>
                 <UploadOrReceiveArea title={"Pick files"}
                     allowReceive={false} allowFolders={allowFolders} onFilesSelected={onFilesSelected}
                 />

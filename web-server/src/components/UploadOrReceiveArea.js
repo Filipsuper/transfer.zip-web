@@ -53,14 +53,14 @@ export default function UploadOrReceiveArea({ title, subtitle, allowReceive, all
     
     return (
         <div ref={ref} onDragEnter={onDragEnter} onDragOver={onDragOver} onDrop={onDrop}
-            onClick={_onUploadClicked} className="Upload d-flex flex-column justify-content-center gap-3 flex-grow-1">
-            <div className="send d-flex flex-column align-items-center justify-content-center btn text-body flex-grow-1">
-                <div className="mb-3">
-                    <div className="circle bg-primary">
-                        <i className="bi bi-plus text-light"></i>
+            onClick={_onUploadClicked} className="Upload d-flex flex-column justify-content-center gap-3 flex-grow-1 tw-group tw-outline-none rounded-4">
+            <div className="send d-flex flex-column align-items-center justify-content-center   text-body flex-grow-1  rounded-4">
+                <div className="mb-3 d-flex flex-row">
+                    <div className="circle bg-primary group-hover:tw-scale-110 tw-transition-transform">
+                        <i className="bi bi-plus text-light group-hover:tw-scale-100 tw-transition-transform tw-duration-200"></i>
                     </div>
                 </div>
-                <div>
+                <div className="d-flex flex-column align-items-center justify-content-center">
                     <h5 className="mb-1">{title || "Upload file"}</h5>
 
                     { allowReceive && (
