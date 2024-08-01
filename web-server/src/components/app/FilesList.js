@@ -71,7 +71,7 @@ export default function FilesList({ files, onAction, primaryActions, redActions,
 
     const FilesListEntry = ({ file }) => {
         return (
-            <tr>
+            <tr className="odd:tw-bg-dark even:tw-bg-dark-subtle tw-border-b tw-border-border  last:tw-border-b-0 hover:tw-bg-dark-secondary hover:tw-cursor-pointer" >
                 <td scope="row" style={{ padding: 0 }}>
                     <Link className="list-group-item list-group-item-action p-2" onClick={e => {
                         e.preventDefault();
@@ -151,21 +151,21 @@ export default function FilesList({ files, onAction, primaryActions, redActions,
     }
 
     return (
-        <div className="FilesList" style={{ maxWidth: maxWidth || "unset" }}>
+        <div className="FilesList bg-dark tw-pb-1 tw-border tw-border-border tw-rounded-md " style={{ maxWidth: maxWidth || "unset" }}>
 
-            <table className="table table-hover table-responsive border">
-                <thead>
-                    <tr>
-                        <th scope="col">File Name</th>
-                        <th scope="col">Size</th>
+            <table className=" tw-w-full  " >
+                <thead className=" tw-border-b tw-border-border">
+                    <tr className=" tw-p-4">
+                        <th className="tw-p-2">File Name</th>
+                        <th className="tw-p-2">Size</th>
                         {!ignoreType && <th className="d-none d-sm-table-cell" scope="col">Type</th>}
-                        <th scope="col"></th>
-                        <th scope="col"></th>
+                        <th className="tw-p-2" ></th>
+                        <th  className="tw-p-2"></th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className="">
                     {files.length == 0 && (
-                        <tr>
+                        <tr className="tw-h-full ">
                             <td scope="row" className="bg-dark-subtle">
                                 <small>No files</small>
                             </td>
